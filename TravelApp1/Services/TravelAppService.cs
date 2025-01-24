@@ -14,7 +14,7 @@ namespace TravelApp1.TravelApp
 
         public async Task<List<SelectedArticlesType>> GetSelectedArticles()
         {
-            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/blazor-travell-app-licensed/static-data/travel-app-selected-articles-type.json", UriKind.RelativeOrAbsolute));
+            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/static-data/travel-app-selected-articles-type.json", UriKind.RelativeOrAbsolute));
             using HttpResponseMessage response = await _http.SendAsync(request).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
@@ -26,7 +26,7 @@ namespace TravelApp1.TravelApp
 
         public async Task<List<DestinationsType>> GetDestinations()
         {
-            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/blazor-travell-app-licensed/static-data/travel-app-destinations-type.json", UriKind.RelativeOrAbsolute));
+            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/static-data/travel-app-destinations-type.json", UriKind.RelativeOrAbsolute));
             using HttpResponseMessage response = await _http.SendAsync(request).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
@@ -38,7 +38,7 @@ namespace TravelApp1.TravelApp
 
         public async Task<List<ImageSet1Type>> GetImageSet1()
         {
-            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/blazor-travell-app-licensed/static-data/travel-app-image-set1-type.json", UriKind.RelativeOrAbsolute));
+            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/static-data/travel-app-image-set1-type.json", UriKind.RelativeOrAbsolute));
             using HttpResponseMessage response = await _http.SendAsync(request).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
@@ -50,7 +50,7 @@ namespace TravelApp1.TravelApp
 
         public async Task<List<ImageSet2Type>> GetImageSet2()
         {
-            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/blazor-travell-app-licensed/static-data/travel-app-image-set2-type.json", UriKind.RelativeOrAbsolute));
+            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/static-data/travel-app-image-set2-type.json", UriKind.RelativeOrAbsolute));
             using HttpResponseMessage response = await _http.SendAsync(request).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
@@ -62,7 +62,7 @@ namespace TravelApp1.TravelApp
 
         public async Task<List<ArticlesSource1Type>> GetArticlesSource1()
         {
-            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/blazor-travell-app-licensed/static-data/travel-app-articles-source1-type.json", UriKind.RelativeOrAbsolute));
+            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/static-data/travel-app-articles-source1-type.json", UriKind.RelativeOrAbsolute));
             using HttpResponseMessage response = await _http.SendAsync(request).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
@@ -74,7 +74,7 @@ namespace TravelApp1.TravelApp
 
         public async Task<List<ArticlesSource2Type>> GetArticlesSource2()
         {
-            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/blazor-travell-app-licensed/static-data/travel-app-articles-source2-type.json", UriKind.RelativeOrAbsolute));
+            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/static-data/travel-app-articles-source2-type.json", UriKind.RelativeOrAbsolute));
             using HttpResponseMessage response = await _http.SendAsync(request).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
@@ -86,7 +86,7 @@ namespace TravelApp1.TravelApp
 
         public async Task<List<ArticlesSource3Type>> GetArticlesSource3()
         {
-            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/blazor-travell-app-licensed/static-data/travel-app-articles-source3-type.json", UriKind.RelativeOrAbsolute));
+            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/static-data/travel-app-articles-source3-type.json", UriKind.RelativeOrAbsolute));
             using HttpResponseMessage response = await _http.SendAsync(request).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
@@ -98,7 +98,7 @@ namespace TravelApp1.TravelApp
 
         public async Task<List<ArticlesSource4Type>> GetArticlesSource4()
         {
-            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/blazor-travell-app-licensed/static-data/travel-app-articles-source4-type.json", UriKind.RelativeOrAbsolute));
+            using HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, new Uri("/static-data/travel-app-articles-source4-type.json", UriKind.RelativeOrAbsolute));
             using HttpResponseMessage response = await _http.SendAsync(request).ConfigureAwait(false);
             if (response.IsSuccessStatusCode)
             {
