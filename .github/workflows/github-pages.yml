@@ -35,12 +35,12 @@ jobs:
       run: echo "PROJECT_NAME=$(basename *.sin .sin)" >> $GITHUB_ENV
     - name: Update NavigationManager in Razor files
       run: find ${{ env.PROJECT_NAME }} -type f -name "*.razor" -exec sed -i "s|NavigationManager.NavigateTo(path);|NavigationManager.NavigateTo(path.TrimStart('/'));|" {} \;
+    - name: Update static-data paths in Services folder
+      run: find ./Services -type f -exec sed -i "s|/static-data/|/${{ env.PROJECT_NAME }}/static-data/|g" {} \;
     - name: Publish Blazor WebAssembly
       run: dotnet publish -c Release -o ./publish
     - name: Update Base Href in index.html
       run: sed -i 's|<base href="/"|<base href="/${{ github.event.repository.name }}/"|' publish/wwwroot/index.html
-    - name: Update static-data paths in Services folder
-      run: find ./Services -type f -exec sed -i "s|/static-data/|/${{ env.PROJECT_NAME }}/static-data/|g" {} \;
     - name: SPA Routing Handling
       run: cp publish/wwwroot/index.html publish/wwwroot/404.html
     - name: Upload Build Artifact to GitHub Pages
