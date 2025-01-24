@@ -40,7 +40,7 @@ jobs:
     - name: Update Base Href in index.html
       run: sed -i 's|<base href="/"|<base href="/${{ github.event.repository.name }}/"|' publish/wwwroot/index.html
     - name: Update static-data paths in Services folder
-      run: find . -type f -path "./Services/*" -exec sed -i "s|/static-data/|/${{ env.PROJECT_NAME }}/static-data/|g" {} \;
+      run: find ./Services -type f -exec sed -i "s|/static-data/|/${{ env.PROJECT_NAME }}/static-data/|g" {} \;
     - name: SPA Routing Handling
       run: cp publish/wwwroot/index.html publish/wwwroot/404.html
     - name: Upload Build Artifact to GitHub Pages
