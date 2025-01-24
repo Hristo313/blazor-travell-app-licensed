@@ -33,6 +33,15 @@ jobs:
       run: dotnet restore
     - name: Set project name
       run: echo "PROJECT_NAME=$(basename *.sin .sin)" >> $GITHUB_ENV
+    - name: Check project structure
+      run: |
+        echo "Listing the project structure..."
+        ls -R
+
+    - name: Test find command for Services folder
+      run: |
+        echo "Searching for Services directory..."
+        find . -type d -name "Services"
     - name: Update NavigationManager in Razor files
       run: find ${{ env.PROJECT_NAME }} -type f -name "*.razor" -exec sed -i "s|NavigationManager.NavigateTo(path);|NavigationManager.NavigateTo(path.TrimStart('/'));|" {} \;
     - name: Update static-data paths in Services folder
